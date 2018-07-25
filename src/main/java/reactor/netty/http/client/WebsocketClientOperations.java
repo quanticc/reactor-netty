@@ -65,7 +65,7 @@ final class WebsocketClientOperations extends HttpClientOperations
 					protocols.isEmpty() ? null : protocols,
 					true,
 					replaced.requestHeaders()
-					        .remove(HttpHeaderNames.HOST));
+					        .remove(HttpHeaderNames.HOST), Integer.MAX_VALUE);
 
 		handshaker.handshake(channel)
 		          .addListener(f -> {

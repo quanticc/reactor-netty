@@ -108,7 +108,7 @@ final class HttpClientWSOperations extends HttpClientOperations
 					protocols,
 					true,
 					replaced.requestHeaders()
-					        .remove(HttpHeaderNames.HOST));
+					        .remove(HttpHeaderNames.HOST), Integer.MAX_VALUE);
 //		}
 		handshakerResult = channel.newPromise();
 
